@@ -1,0 +1,90 @@
+:root {
+  --bg-root-color: var(--color-0);
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: var(--bg-root-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+
+}
+
+.full-screen {
+  width: 100vw;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.admin-screen {
+  min-width: 100vw;
+  min-height: 80vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 1%;
+}
+
+.admin-screen .box{
+  gap: 0px;
+  min-width: 15%;
+}
+
+.box {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  overflow-wrap: break-word;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.box > button {
+  width: 100px;
+}
+
+.info {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999; 
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 768px) {
+  .admin-screen {
+    flex-direction: column;
+  }
+}

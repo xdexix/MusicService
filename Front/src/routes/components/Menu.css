@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-footer-color: var(--color-1);
+    --bg-header-color: var(--color-1);
+    --bg-btn-color: var(--color-2);
+    --text-color: var(--color-3);
+}
+
+footer {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    background-color: var(--bg-footer-color);
+    height: 100px;
+    z-index: 20;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    height: 40px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    background-color: var(--bg-header-color);
+}
+
+header > a {
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: var(--bg-btn-color);
+    border-radius: 5px;
+    padding: 0px 5px;
+    margin: 0px 5px;
+    height: 30px;
+    align-content: center;
+}
+
+.arrow-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.arrow-button .fas {
+    font-size: 24px;
+}
+
+.arrow-button .far {
+    font-size: 24px;
+}
+
+.arrow-button .fas.fa-heart {
+    color: red;
+}
+
+.playlist-check {
+    position: absolute;
+    left: 10px;
+    cursor: pointer;
+}
+
+.playlist-container {
+    height: auto;
+    width: 30%;
+    overflow-y: auto;
+    position: fixed;
+    left: 0;
+    background-color: var(--bg-header-color);
+    z-index: 10;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.playlist-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.playlist-item:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.playlist-item.active {
+    background-color: rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+}
+
+.playlist-var {
+    background-color: var(--bg-btn-color);
+    height: 30px;
+}
+
+@media (orientation: portrait) and (max-width: 768px) {
+    .playlist-container {
+        width: 100%;
+    }
+}
