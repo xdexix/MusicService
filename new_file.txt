@@ -1,1 +1,3 @@
+New line after conflict
 PС
+Browser
